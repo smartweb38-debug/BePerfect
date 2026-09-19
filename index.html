@@ -6,7 +6,7 @@
     <title>BePerfect - Auravée Lab | دعم الشهية وزيادة الوزن</title>
     <meta name="description" content="BePerfect من Auravée Lab: تركيبة غذائية بمكونات مختارة لدعم الشهية وزيادة الوزن بطريقة متوازنة. توصيل لـ 58 ولاية، دفع عند الاستلام.">
     
-    <!-- Google Fonts: Tajawal for Arabic, Playfair Display for Luxury English Branding -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -115,7 +115,7 @@
         }
 
         /* =========================================
-           BUTTONS (Premium)
+           BUTTONS
            ========================================= */
         .btn {
             display: inline-flex;
@@ -179,45 +179,10 @@
         }
 
         /* =========================================
-           NAVBAR (Compact & Glass)
-           ========================================= */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            padding: 10px 0;
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-            transition: var(--transition);
-        }
-
-        .navbar .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: var(--font-luxury);
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--black);
-            letter-spacing: 0.5px;
-        }
-
-        .logo span {
-            color: var(--pink);
-        }
-
-        /* =========================================
-           HERO SECTION (Product-Focused)
+           HERO SECTION
            ========================================= */
         .hero {
-            padding: 90px 0 40px;
+            padding: 30px 0 40px;
             background: linear-gradient(180deg, var(--soft-rose) 0%, var(--white) 100%);
             position: relative;
             overflow: hidden;
@@ -256,7 +221,7 @@
         }
 
         .hero-title {
-            font-size: 1.7rem;
+            font-size: 1.55rem;
             font-weight: 800;
             line-height: 1.3;
             color: var(--black);
@@ -268,8 +233,8 @@
             font-size: 0.9rem;
             font-weight: 400;
             color: var(--text-light);
-            max-width: 400px;
-            margin-bottom: 24px;
+            max-width: 420px;
+            margin-bottom: 20px;
             line-height: 1.6;
         }
 
@@ -277,7 +242,7 @@
             position: relative;
             width: 100%;
             max-width: 300px;
-            margin: 0 auto 24px;
+            margin: 0 auto 16px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -311,14 +276,14 @@
         }
 
         .hero-price-tag .price {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             font-weight: 800;
             color: var(--magenta);
             letter-spacing: -0.5px;
         }
 
         .hero-price-tag .price small {
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             font-weight: 500;
             color: var(--text-light);
         }
@@ -328,7 +293,7 @@
             flex-direction: column;
             gap: 12px;
             width: 100%;
-            max-width: 300px;
+            max-width: 320px;
         }
 
         .hero-badges {
@@ -362,122 +327,102 @@
         }
 
         /* =========================================
-           WHY BEPERFECT? (Subtle Section)
+           TIMELINE / 3 WEEKS
            ========================================= */
-        .why-section {
-            background: var(--very-light-pink);
-        }
-
-        .why-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-        }
-
-        .why-card {
+        .timeline-section {
             background: var(--white);
-            padding: 18px 14px;
-            border-radius: var(--radius-md);
-            text-align: center;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--border-ultra-light);
-            transition: var(--transition);
         }
 
-        .why-card:hover {
+        .timeline-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .timeline-card {
+            background: var(--white);
+            border-radius: var(--radius-md);
+            padding: 18px 16px;
+            border: 1.5px solid var(--border-ultra-light);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .timeline-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--pink), var(--magenta));
+            opacity: 0.8;
+        }
+
+        .timeline-card:hover {
             transform: translateY(-3px);
             box-shadow: var(--shadow-md);
             border-color: var(--border-light);
         }
 
-        .why-icon {
-            font-size: 1.5rem;
-            display: block;
-            margin-bottom: 8px;
+        .timeline-week-badge {
+            flex-shrink: 0;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--pink), var(--magenta));
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 0.6rem;
+            line-height: 1.1;
+            box-shadow: 0 4px 12px rgba(255, 77, 141, 0.25);
         }
 
-        .why-card h4 {
-            font-size: 0.85rem;
-            font-weight: 700;
+        .timeline-week-badge span {
+            font-size: 1.1rem;
+            font-weight: 800;
+        }
+
+        .timeline-content h4 {
+            font-size: 0.95rem;
+            font-weight: 800;
             color: var(--black);
             margin-bottom: 4px;
         }
 
-        .why-card p {
-            font-size: 0.7rem;
+        .timeline-content p {
+            font-size: 0.8rem;
             font-weight: 400;
             color: var(--text-light);
-            line-height: 1.4;
+            line-height: 1.5;
         }
 
         /* =========================================
-           INGREDIENTS (Compact & Elegant)
-           ========================================= */
-        .ingredients-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-        }
-
-        .ingredient-card {
-            background: var(--white);
-            padding: 16px 12px;
-            border-radius: var(--radius-md);
-            text-align: center;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--border-ultra-light);
-            transition: var(--transition);
-        }
-
-        .ingredient-card:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-md);
-            border-color: var(--border-light);
-        }
-
-        .ingredient-icon {
-            font-size: 1.5rem;
-            display: block;
-            margin-bottom: 8px;
-        }
-
-        .ingredient-card h4 {
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: var(--black);
-            margin-bottom: 3px;
-        }
-
-        .ingredient-card p {
-            font-size: 0.7rem;
-            font-weight: 400;
-            color: var(--text-light);
-            line-height: 1.3;
-        }
-
-        .ingredients-grid .ingredient-card:last-child:nth-child(odd) {
-            grid-column: span 2;
-            max-width: 50%;
-            margin: 0 auto;
-        }
-
-        /* =========================================
-           OFFERS (Premium Horizontal Cards)
+           OFFERS
            ========================================= */
         .offers-section {
-            background: var(--white);
+            background: var(--very-light-pink);
         }
 
         .offers-list {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 14px;
         }
 
         .offer-card {
             background: var(--white);
             border-radius: var(--radius-md);
-            padding: 16px 18px;
+            padding: 18px 18px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -497,27 +442,29 @@
 
         .offer-card.selected {
             border-color: var(--pink);
-            box-shadow: var(--shadow-glow);
+            box-shadow: 0 0 0 1px var(--pink), var(--shadow-glow);
             background: linear-gradient(to left, var(--white), var(--soft-rose));
         }
 
         .offer-info {
             display: flex;
             flex-direction: column;
-            gap: 3px;
+            gap: 4px;
             flex: 1;
         }
 
         .offer-title {
-            font-size: 1rem;
+            font-size: 1.05rem;
             font-weight: 800;
             color: var(--black);
+            letter-spacing: -0.2px;
         }
 
         .offer-price {
-            font-size: 1.15rem;
+            font-size: 1.3rem;
             font-weight: 800;
             color: var(--magenta);
+            letter-spacing: -0.3px;
         }
 
         .offer-price small {
@@ -527,7 +474,7 @@
         }
 
         .offer-delivery {
-            font-size: 0.7rem;
+            font-size: 0.72rem;
             font-weight: 600;
             color: var(--pink);
         }
@@ -536,23 +483,24 @@
             position: absolute;
             top: 0;
             left: 0;
-            background: var(--pink);
+            background: linear-gradient(135deg, var(--pink), var(--magenta));
             color: var(--white);
-            padding: 3px 10px;
+            padding: 4px 12px;
             border-radius: 0 0 var(--radius-sm) 0;
             font-size: 0.65rem;
             font-weight: 700;
+            letter-spacing: 0.2px;
         }
 
         .offer-badge.best-value {
-            background: var(--magenta);
+            background: linear-gradient(135deg, var(--magenta), #8a0040);
         }
 
         .offer-check {
-            width: 22px;
-            height: 22px;
+            width: 26px;
+            height: 26px;
             border-radius: 50%;
-            border: 1.5px solid var(--border-light);
+            border: 2px solid var(--border-light);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -562,51 +510,19 @@
         }
 
         .offer-card.selected .offer-check {
-            background: var(--pink);
+            background: linear-gradient(135deg, var(--pink), var(--magenta));
             border-color: var(--pink);
             color: var(--white);
         }
 
         .offer-card.selected .offer-check::after {
             content: '✓';
-            font-size: 0.75rem;
+            font-size: 0.85rem;
             font-weight: 700;
         }
 
         /* =========================================
-           TRUST BADGES
-           ========================================= */
-        .trust-section {
-            background: var(--very-light-pink);
-        }
-
-        .trust-badges {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .trust-badge {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            background: var(--white);
-            padding: 8px 16px;
-            border-radius: var(--radius-pill);
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--border-ultra-light);
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--text-dark);
-        }
-
-        .trust-badge span {
-            font-size: 1rem;
-        }
-
-        /* =========================================
-           ORDER FORM (Premium Checkout)
+           ORDER FORM
            ========================================= */
         .order-section {
             background: var(--white);
@@ -620,6 +536,18 @@
             border: 1px solid var(--border-ultra-light);
             max-width: 500px;
             margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .order-form-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--pink), var(--magenta));
         }
 
         .form-section {
@@ -627,17 +555,20 @@
         }
 
         .form-section-title {
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             font-weight: 800;
             color: var(--text-light);
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-bottom: 12px;
             display: block;
+            padding-bottom: 6px;
+            border-bottom: 1px dashed var(--border-light);
         }
 
         .form-group {
             margin-bottom: 12px;
+            transition: var(--transition);
         }
 
         .form-group label {
@@ -675,6 +606,16 @@
             border-color: #ff3333;
         }
 
+        .form-group.disabled {
+            opacity: 0.45;
+            pointer-events: none;
+        }
+
+        .form-group.disabled input {
+            background: #f0f0f0;
+            cursor: not-allowed;
+        }
+
         .error-message {
             color: #ff3333;
             font-size: 0.65rem;
@@ -683,7 +624,6 @@
             min-height: 14px;
         }
 
-        /* Delivery Options */
         .delivery-options {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -694,7 +634,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 12px;
+            padding: 14px 12px;
             border: 1.5px solid var(--border-ultra-light);
             border-radius: var(--radius-sm);
             cursor: pointer;
@@ -710,19 +650,19 @@
         .delivery-card:has(input:checked) {
             border-color: var(--pink);
             background: var(--soft-rose);
+            box-shadow: 0 0 0 1px var(--pink);
         }
 
         .delivery-icon {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             margin-bottom: 4px;
         }
 
         .delivery-card span:last-child {
-            font-size: 0.7rem;
+            font-size: 0.72rem;
             font-weight: 600;
         }
 
-        /* Order Summary */
         .order-summary {
             background: var(--very-light-pink);
             border-radius: var(--radius-md);
@@ -734,7 +674,7 @@
         .summary-row {
             display: flex;
             justify-content: space-between;
-            font-size: 0.8rem;
+            font-size: 0.82rem;
             font-weight: 400;
             padding: 5px 0;
             color: var(--text-dark);
@@ -742,7 +682,7 @@
 
         .summary-row.total-row {
             font-weight: 800;
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             color: var(--magenta);
             border-top: 1.5px dashed var(--border-light);
             margin-top: 8px;
@@ -750,7 +690,157 @@
         }
 
         /* =========================================
-           FAQ (Minimal Accordion)
+           INGREDIENTS
+           ========================================= */
+        .ingredients-section {
+            background: var(--white);
+        }
+
+        .ingredients-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .ingredient-card {
+            background: var(--white);
+            padding: 20px 14px;
+            border-radius: var(--radius-md);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-ultra-light);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ingredient-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 45px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--pink), var(--magenta));
+            border-radius: 0 0 4px 4px;
+        }
+
+        .ingredient-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--border-light);
+        }
+
+        .ingredient-icon {
+            font-size: 1.8rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .ingredient-card h4 {
+            font-size: 0.9rem;
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 4px;
+        }
+
+        .ingredient-card p {
+            font-size: 0.72rem;
+            font-weight: 400;
+            color: var(--text-light);
+            line-height: 1.4;
+        }
+
+        .ingredients-grid .ingredient-card:last-child:nth-child(odd) {
+            grid-column: span 2;
+            max-width: 50%;
+            margin: 0 auto;
+        }
+
+        /* =========================================
+           WHY BEPERFECT?
+           ========================================= */
+        .why-section {
+            background: var(--very-light-pink);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .why-card {
+            background: var(--white);
+            padding: 20px 14px;
+            border-radius: var(--radius-md);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-ultra-light);
+            transition: var(--transition);
+        }
+
+        .why-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--border-light);
+        }
+
+        .why-icon {
+            font-size: 1.7rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .why-card h4 {
+            font-size: 0.88rem;
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 4px;
+        }
+
+        .why-card p {
+            font-size: 0.72rem;
+            font-weight: 400;
+            color: var(--text-light);
+            line-height: 1.4;
+        }
+
+        /* =========================================
+           TRUST BADGES
+           ========================================= */
+        .trust-section {
+            background: var(--white);
+        }
+
+        .trust-badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--white);
+            padding: 8px 16px;
+            border-radius: var(--radius-pill);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-ultra-light);
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .trust-badge span {
+            font-size: 1rem;
+        }
+
+        /* =========================================
+           FAQ
            ========================================= */
         .faq-section {
             background: var(--very-light-pink);
@@ -949,22 +1039,20 @@
         }
 
         /* =========================================
-           RESPONSIVE (TABLET & DESKTOP)
+           RESPONSIVE
            ========================================= */
         @media (min-width: 768px) {
             .section-padding { padding: 56px 0; }
             .section-header h2 { font-size: 1.8rem; }
             
-            .hero { padding: 110px 0 56px; }
-            .hero-content { flex-direction: row; text-align: right; gap: 40px; }
-            .hero-text-side { flex: 1; }
-            .hero-image-side { flex: 1; display: flex; justify-content: center; }
-            .hero-image-wrapper { max-width: 380px; margin: 0; }
-            .hero-image { max-width: 320px; }
-            .hero-title { font-size: 2.4rem; }
+            .hero { padding: 50px 0 56px; }
+            .hero-title { font-size: 2.2rem; }
             .hero-actions { flex-direction: row; max-width: none; }
             
-            .why-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; }
+            .timeline-grid { flex-direction: row; }
+            .timeline-card { flex: 1; flex-direction: column; text-align: center; align-items: center; }
+            .timeline-card::before { width: 100%; height: 4px; top: 0; right: 0; }
+            
             .ingredients-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
             .ingredients-grid .ingredient-card:last-child:nth-child(odd) { grid-column: auto; max-width: none; margin: 0; }
             
@@ -973,6 +1061,8 @@
             .offer-info { align-items: center; }
             .offer-check { margin: 12px 0 0 0; }
             .offer-badge { position: static; border-radius: var(--radius-pill); margin-bottom: 8px; }
+            
+            .why-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; }
             
             .mobile-sticky-cta { display: none; }
             
@@ -996,41 +1086,26 @@
 </head>
 <body>
 
-    <!-- ================= NAVBAR ================= -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">Auravée <span>Lab</span></div>
-            <a href="#order" class="btn btn-primary btn-small">اطلب الآن</a>
-        </div>
-    </nav>
-
     <!-- ================= HERO ================= -->
     <section class="hero">
         <div class="container hero-content">
-            <div class="hero-text-side">
-                <div class="hero-brand-badge">BePerfect</div>
-                <h1 class="hero-title">تعبتي من كلمة <span class="gradient-text">«ضعيفة»</span>؟</h1>
-                <p class="hero-subtitle">تركيبة غذائية بمكونات مختارة لدعم الشهية وزيادة الوزن بطريقة متوازنة.</p>
-                
-                <div class="hero-price-tag">
-                    <span class="price">3200 <small>DA</small></span>
-                </div>
+            <div class="hero-brand-badge">BePerfect</div>
+            <h1 class="hero-title">جسمك يستحق <span class="gradient-text">الثقة</span> من جديد</h1>
+            <p class="hero-subtitle">تركيبة غذائية بمكونات مختارة لدعم الشهية وزيادة الوزن بطريقة متوازنة، خطوة بخطوة.</p>
 
-                <div class="hero-actions">
-                    <a href="#order" class="btn btn-primary btn-block">اطلبي BePerfect الآن</a>
-                    <a href="#about" class="btn btn-secondary btn-block">اكتشفي التفاصيل</a>
-                </div>
+            <div class="hero-image-wrapper">
+                <img src="finaal.jpg" alt="BePerfect Product" class="hero-image" loading="eager">
             </div>
-            
-            <div class="hero-image-side">
-                <div class="hero-image-wrapper">
-                    <!-- Placeholder image - replace with your actual image -->
-                    <img src="finaal.jpg" alt="BePerfect Product" class="hero-image" loading="eager">
-                </div>
-            </div>
-        </div>
 
-        <div class="container">
+            <div class="hero-price-tag">
+                <span class="price">3200 <small>DA</small></span>
+            </div>
+
+            <div class="hero-actions">
+                <a href="#order" class="btn btn-primary btn-block">اطلبي الآن</a>
+                <a href="#details" class="btn btn-secondary btn-block">اكتشفي التفاصيل</a>
+            </div>
+
             <div class="hero-badges">
                 <span>🌿 مكونات مختارة</span>
                 <span>📦 300g</span>
@@ -1040,69 +1115,34 @@
         </div>
     </section>
 
-    <!-- ================= WHY BEPERFECT? ================= -->
-    <section class="section-padding why-section" id="about">
+    <!-- ================= DETAILS / 3 WEEKS ================= -->
+    <section class="section-padding timeline-section" id="details">
         <div class="container reveal">
             <div class="section-header">
-                <h2>لماذا BePerfect؟</h2>
+                <h2>رحلتك مع BePerfect</h2>
+                <p>3 أسابيع... خطوة بخطوة نحو التغيير.</p>
             </div>
-            <div class="why-grid">
-                <div class="why-card">
-                    <span class="why-icon">🌿</span>
-                    <h4>مكونات مختارة</h4>
-                    <p>تركيبة غذائية بمكونات مختارة بعناية.</p>
+            <div class="timeline-grid">
+                <div class="timeline-card">
+                    <div class="timeline-week-badge"><span>1</span>أسبوع</div>
+                    <div class="timeline-content">
+                        <h4>الأسبوع الأول</h4>
+                        <p>راح يفتحلك شهية وتولي توكلي أي حاجة.</p>
+                    </div>
                 </div>
-                <div class="why-card">
-                    <span class="why-icon">🥣</span>
-                    <h4>سهل الاستخدام</h4>
-                    <p>يمكن دمجه بسهولة في الروتين اليومي.</p>
+                <div class="timeline-card">
+                    <div class="timeline-week-badge"><span>2</span>أسبوع</div>
+                    <div class="timeline-content">
+                        <h4>الأسبوع الثاني</h4>
+                        <p>تبدأي تزيدي في الميزان بشكل ملحوظ.</p>
+                    </div>
                 </div>
-                <div class="why-card">
-                    <span class="why-icon">📦</span>
-                    <h4>عبوة 300g</h4>
-                    <p>حجم عملي للاستخدام اليومي.</p>
-                </div>
-                <div class="why-card">
-                    <span class="why-icon">🚚</span>
-                    <h4>توصيل 58 ولاية</h4>
-                    <p>مع إمكانية الدفع عند الاستلام.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ================= INGREDIENTS ================= -->
-    <section class="section-padding" style="background: var(--white);">
-        <div class="container reveal">
-            <div class="section-header">
-                <h2>مكونات مختارة بعناية 🌿</h2>
-                <p>تركيبة فريدة من المكونات الطبيعية.</p>
-            </div>
-            <div class="ingredients-grid">
-                <div class="ingredient-card">
-                    <span class="ingredient-icon">🌾</span>
-                    <h4>الشوفان</h4>
-                    <p>مصدر غني بالألياف والطاقة.</p>
-                </div>
-                <div class="ingredient-card">
-                    <span class="ingredient-icon">🌴</span>
-                    <h4>مسحوق التمر</h4>
-                    <p>مذاق طبيعي حلو ومغذي.</p>
-                </div>
-                <div class="ingredient-card">
-                    <span class="ingredient-icon">🥜</span>
-                    <h4>اللوز المطحون</h4>
-                    <p>غني بالدهون الصحية.</p>
-                </div>
-                <div class="ingredient-card">
-                    <span class="ingredient-icon">🌱</span>
-                    <h4>بذور الشيا</h4>
-                    <p>مصدر للأوميغا 3 والألياف.</p>
-                </div>
-                <div class="ingredient-card">
-                    <span class="ingredient-icon">🌿</span>
-                    <h4>الماكا</h4>
-                    <p>جذر طبيعي معروف بخصائصه.</p>
+                <div class="timeline-card">
+                    <div class="timeline-week-badge"><span>3</span>أسبوع</div>
+                    <div class="timeline-content">
+                        <h4>الأسبوع الثالث</h4>
+                        <p>تشوفي نتيجة + يكبر مناطق أنثوية ويصفالك وجهك.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1115,21 +1155,7 @@
                 <h2>اختاري العرض المناسب لكِ ✨</h2>
                 <p>عروض حصرية مع توصيل مجاني.</p>
             </div>
-            <div class="offers-list" id="offers-grid">
-                <!-- يتم توليد العروض هنا بواسطة JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <!-- ================= TRUST ================= -->
-    <section class="section-padding trust-section">
-        <div class="container reveal">
-            <div class="trust-badges">
-                <div class="trust-badge"><span>🚚</span> توصيل 58 ولاية</div>
-                <div class="trust-badge"><span>💵</span> دفع عند الاستلام</div>
-                <div class="trust-badge"><span>📦</span> منزل أو مكتب</div>
-                <div class="trust-badge"><span>⚡</span> طلب سريع</div>
-            </div>
+            <div class="offers-list" id="offers-grid"></div>
         </div>
     </section>
 
@@ -1177,7 +1203,7 @@
                         </select>
                         <span class="error-message" id="error-wilaya"></span>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" id="commune-group">
                         <label for="commune">البلدية</label>
                         <input type="text" id="commune" placeholder="أدخلي البلدية" required>
                         <span class="error-message" id="error-commune"></span>
@@ -1203,30 +1229,95 @@
 
                 <!-- Order Summary -->
                 <div class="order-summary" id="order-summary">
-                    <div class="summary-row">
-                        <span>🛍️ العرض:</span>
-                        <span id="summary-offer">-</span>
-                    </div>
-                    <div class="summary-row">
-                        <span>📦 الكمية:</span>
-                        <span id="summary-quantity">-</span>
-                    </div>
-                    <div class="summary-row">
-                        <span>💰 سعر المنتج:</span>
-                        <span id="summary-price">0 DA</span>
-                    </div>
-                    <div class="summary-row">
-                        <span>🚚 التوصيل:</span>
-                        <span id="summary-delivery">0 DA</span>
-                    </div>
-                    <div class="summary-row total-row">
-                        <span>💵 الإجمالي:</span>
-                        <span id="summary-total">0 DA</span>
-                    </div>
+                    <div class="summary-row"><span>🛍️ العرض:</span><span id="summary-offer">-</span></div>
+                    <div class="summary-row"><span>📦 الكمية:</span><span id="summary-quantity">-</span></div>
+                    <div class="summary-row"><span>💰 سعر المنتج:</span><span id="summary-price">0 DA</span></div>
+                    <div class="summary-row"><span>🚚 التوصيل:</span><span id="summary-delivery">0 DA</span></div>
+                    <div class="summary-row total-row"><span>💵 الإجمالي:</span><span id="summary-total">0 DA</span></div>
                 </div>
 
                 <button type="submit" class="btn btn-primary btn-block" id="submit-btn" style="margin-top: 16px;">تأكيد الطلب</button>
             </form>
+        </div>
+    </section>
+
+    <!-- ================= INGREDIENTS ================= -->
+    <section class="section-padding ingredients-section">
+        <div class="container reveal">
+            <div class="section-header">
+                <h2>مكونات مختارة بعناية 🌿</h2>
+                <p>تركيبة فريدة من المكونات الطبيعية.</p>
+            </div>
+            <div class="ingredients-grid">
+                <div class="ingredient-card">
+                    <span class="ingredient-icon">🌾</span>
+                    <h4>الشوفان</h4>
+                    <p>مصدر غني بالألياف والطاقة.</p>
+                </div>
+                <div class="ingredient-card">
+                    <span class="ingredient-icon">🌴</span>
+                    <h4>مسحوق التمر</h4>
+                    <p>مذاق طبيعي حلو ومغذي.</p>
+                </div>
+                <div class="ingredient-card">
+                    <span class="ingredient-icon">🥜</span>
+                    <h4>اللوز المطحون</h4>
+                    <p>غني بالدهون الصحية.</p>
+                </div>
+                <div class="ingredient-card">
+                    <span class="ingredient-icon">🌱</span>
+                    <h4>بذور الشيا</h4>
+                    <p>مصدر للأوميغا 3 والألياف.</p>
+                </div>
+                <div class="ingredient-card">
+                    <span class="ingredient-icon">🌿</span>
+                    <h4>الماكا</h4>
+                    <p>جذر طبيعي معروف بخصائصه.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= WHY BEPERFECT? ================= -->
+    <section class="section-padding why-section">
+        <div class="container reveal">
+            <div class="section-header">
+                <h2>لماذا تختاري BePerfect؟</h2>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <span class="why-icon">🌿</span>
+                    <h4>مكونات مختارة</h4>
+                    <p>تركيبة غذائية بمكونات مختارة بعناية.</p>
+                </div>
+                <div class="why-card">
+                    <span class="why-icon">🥣</span>
+                    <h4>سهل الاستخدام</h4>
+                    <p>يمكن دمجه بسهولة في الروتين اليومي.</p>
+                </div>
+                <div class="why-card">
+                    <span class="why-icon">📦</span>
+                    <h4>عبوة 300g</h4>
+                    <p>حجم عملي للاستخدام اليومي.</p>
+                </div>
+                <div class="why-card">
+                    <span class="why-icon">🚚</span>
+                    <h4>توصيل 58 ولاية</h4>
+                    <p>مع إمكانية الدفع عند الاستلام.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= TRUST ================= -->
+    <section class="section-padding trust-section">
+        <div class="container reveal">
+            <div class="trust-badges">
+                <div class="trust-badge"><span>🚚</span> توصيل 58 ولاية</div>
+                <div class="trust-badge"><span>💵</span> دفع عند الاستلام</div>
+                <div class="trust-badge"><span>📦</span> منزل أو مكتب</div>
+                <div class="trust-badge"><span>⚡</span> طلب سريع</div>
+            </div>
         </div>
     </section>
 
@@ -1301,49 +1392,22 @@
         // ===============================
         // PRODUCT CONFIG
         // ===============================
-        const product = {
-            name: "BePerfect",
-            brand: "Auravée Lab",
-            weight: "300G"
-        };
+        const product = { name: "BePerfect", brand: "Auravée Lab", weight: "300G" };
 
         // ===============================
         // OFFERS CONFIG
         // ===============================
         const offers = {
-            one: {
-                id: "one",
-                name: "1 علبة",
-                quantity: 1,
-                price: 3200,
-                freeDelivery: false,
-                desc: "اختيار مناسب للتجربة"
-            },
-            two: {
-                id: "two",
-                name: "2 علب",
-                quantity: 2,
-                price: 6000,
-                freeDelivery: true,
-                badge: "الأكثر اختيارًا",
-                desc: "توصيل مجاني 🚚"
-            },
-            three: {
-                id: "three",
-                name: "3 علب",
-                quantity: 3,
-                price: 8200,
-                freeDelivery: true,
-                badge: "قيمة أفضل",
-                desc: "توصيل مجاني 🚚"
-            }
+            one:   { id: "one",   name: "1 علبة", quantity: 1, price: 3200, freeDelivery: false, desc: "اختيار مناسب للتجربة" },
+            two:   { id: "two",   name: "2 علب",  quantity: 2, price: 6000, freeDelivery: true,  badge: "الأكثر اختيارًا", desc: "توصيل مجاني 🚚" },
+            three: { id: "three", name: "3 علب",  quantity: 3, price: 8200, freeDelivery: true,  badge: "قيمة أفضل",       desc: "توصيل مجاني 🚚" }
         };
 
         // ===============================
-        // DELIVERY PRICES
+        // DELIVERY PRICES (Extrait de la photo World Express)
         // ===============================
         const deliveryPrices = {
-            "تسمسيلت": { home: 600, office: 450 },
+            "سطيف": { home: 500, office: 400 },
             "الجزائر": { home: 700, office: 450 },
             "الشلف": { home: 700, office: 450 },
             "البليدة": { home: 700, office: 450 },
@@ -1356,62 +1420,58 @@
             "بومرداس": { home: 700, office: 450 },
             "تيبازة": { home: 700, office: 450 },
             "عين الدفلى": { home: 700, office: 450 },
-            "أم البواقي": { home: 750, office: 450 },
-            "باتنة": { home: 750, office: 450 },
-            "بجاية": { home: 750, office: 450 },
-            "تلمسان": { home: 750, office: 450 },
-            "تيارت": { home: 750, office: 450 },
-            "جيجل": { home: 750, office: 450 },
-            "سكيكدة": { home: 750, office: 450 },
-            "سيدي بلعباس": { home: 750, office: 450 },
-            "عنابة": { home: 750, office: 450 },
-            "مستغانم": { home: 750, office: 450 },
-            "المسيلة": { home: 750, office: 450 },
+            "أم البواقي": { home: 750, office: 500 },
+            "باتنة": { home: 750, office: 500 },
+            "بجاية": { home: 750, office: 500 },
+            "تلمسان": { home: 750, office: 500 },
+            "تيارت": { home: 750, office: 500 },
+            "جيجل": { home: 750, office: 500 },
+            "سكيكدة": { home: 750, office: 500 },
+            "سيدي بلعباس": { home: 750, office: 500 },
+            "عنابة": { home: 750, office: 500 },
+            "مستغانم": { home: 750, office: 500 },
+            "المسيلة": { home: 750, office: 500 },
+            "تسمسيلت": { home: 750, office: 500 },
+            "ميلة": { home: 750, office: 500 },
+            "غليزان": { home: 750, office: 500 },
+            "الجلفة": { home: 800, office: 550 },
+            "سعيدة": { home: 800, office: 550 },
+            "قالمة": { home: 800, office: 550 },
             "معسكر": { home: 800, office: 550 },
             "خنشلة": { home: 800, office: 550 },
             "سوق أهراس": { home: 800, office: 550 },
             "عين تموشنت": { home: 800, office: 550 },
-            "بسكرة": { home: 900, office: 550 },
+            "بسكرة": { home: 850, office: 550 },
             "تبسة": { home: 850, office: 550 },
-            "الطارف": { home: 900, office: 600 },
-            "الأغواط": { home: 900, office: 600 },
-            "أولاد جلال": { home: 900, office: 600 },
-            "ورقلة": { home: 1000, office: 700 },
-            "البيض": { home: 1000, office: 700 },
-            "الوادي": { home: 1000, office: 700 },
-            "غرداية": { home: 1000, office: 700 },
-            "توقرت": { home: 1000, office: 700 },
-            "المغير": { home: 1000, office: 700 },
-            "المنيعة": { home: 1100, office: 700 },
-            "أدرار": { home: 1200, office: 900 },
-            "بشار": { home: 1200, office: 900 },
-            "تيميمون": { home: 1200, office: 900 },
-            "بني عباس": { home: 1200, office: 900 },
-            "عين صالح": { home: 1200, office: 900 },
-            "تامنراست": { home: 1600, office: 1200 },
+            "الطارف": { home: 850, office: 550 },
+            "الأغواط": { home: 900, office: 700 },
+            "أولاد جلال": { home: 900, office: 700 },
+            "ورقلة": { home: 1000, office: 800 },
+            "البيض": { home: 1000, office: 800 },
+            "الوادي": { home: 1000, office: 800 },
+            "النعامة": { home: 1000, office: 800 },
+            "غرداية": { home: 1000, office: 800 },
+            "تقرت": { home: 1000, office: 800 },
+            "المغير": { home: 1000, office: 800 },
+            "المنيعة": { home: 1100, office: 900 },
+            "أدرار": { home: 1200, office: 1000 },
+            "بشار": { home: 1200, office: 1000 },
+            "تيميمون": { home: 1200, office: 1000 },
+            "بني عباس": { home: 1200, office: 1000 },
+            "عين صالح": { home: 1200, office: 1000 },
+            "تمنراست": { home: 1400, office: 1100 },
             "تندوف": { home: 1600, office: 1200 },
-            "إليزي": { home: 2000, office: 1500 },
-            "برج باجي مختار": { home: 2000, office: 1500 },
-            "جانت": { home: 2000, office: 1500 },
-            "سعيدة": { home: 800, office: 550 },
-            "قالمة": { home: 800, office: 550 },
-            "ميلة": { home: 750, office: 450 },
-            "عين مليلة": { home: 750, office: 450 },
-            "بريكة": { home: 800, office: 550 },
-            "قصر البخاري": { home: 700, office: 450 },
-            "البرواقية": { home: 700, office: 450 },
-            "حجوط": { home: 700, office: 450 },
-            "القليعة": { home: 700, office: 450 },
-            "بوفاريك": { home: 700, office: 450 },
-            "الأربعاء": { home: 700, office: 450 }
+            "إليزي": { home: 1700, office: 1300 },
+            "برج باجي مختار": { home: 1700, office: 1300 },
+            "عين قزام": { home: 1700, office: 1300 },
+            "جانت": { home: 1700, office: 1300 }
         };
 
         // ===============================
         // TELEGRAM CONFIG
         // ===============================
-        // ⚠️ IMPORTANT: Remplacez ce token par le NOUVEAU token après /revoke sur BotFather
         const TELEGRAM_BOT_TOKEN = 'COLLEZ_VOTRE_NOUVEAU_TOKEN_ICI';
-        const TELEGRAM_CHAT_ID = '6245150338'; // ✅ Votre Chat ID
+        const TELEGRAM_CHAT_ID = '6245150338';
 
         // ===============================
         // DOM ELEMENTS
@@ -1429,6 +1489,9 @@
         const mobileStickyCta = document.getElementById('mobile-sticky-cta');
         const successModal = document.getElementById('success-modal');
         const modalClose = document.getElementById('modal-close');
+        const communeGroup = document.getElementById('commune-group');
+        const communeInput = document.getElementById('commune');
+        const errorCommune = document.getElementById('error-commune');
 
         // ===============================
         // INITIALIZATION
@@ -1440,6 +1503,7 @@
             setupFaq();
             setupMobileSticky();
             setupReveal();
+            toggleCommuneRequired();
             updateSummary();
         });
 
@@ -1452,12 +1516,10 @@
                 const card = document.createElement('div');
                 card.className = `offer-card ${offer.id === 'one' ? 'selected' : ''}`;
                 card.dataset.offerId = offer.id;
-                
                 let badgeHtml = '';
                 if (offer.badge) {
                     badgeHtml = `<span class="offer-badge ${offer.id === 'three' ? 'best-value' : ''}">${offer.badge}</span>`;
                 }
-
                 card.innerHTML = `
                     ${badgeHtml}
                     <div class="offer-info">
@@ -1467,7 +1529,6 @@
                     </div>
                     <div class="offer-check"></div>
                 `;
-
                 card.addEventListener('click', () => selectOffer(offer.id));
                 offersGrid.appendChild(card);
             });
@@ -1506,14 +1567,33 @@
             updateSummary();
         }
 
-        offerSelect.addEventListener('change', (e) => {
-            selectOffer(e.target.value);
-        });
-
+        offerSelect.addEventListener('change', (e) => selectOffer(e.target.value));
         wilayaSelect.addEventListener('change', updateSummary);
         document.querySelectorAll('input[name="deliveryType"]').forEach(radio => {
-            radio.addEventListener('change', updateSummary);
+            radio.addEventListener('change', () => {
+                toggleCommuneRequired();
+                updateSummary();
+            });
         });
+
+        // ===============================
+        // COMMUNE REQUIRED TOGGLE
+        // ===============================
+        function toggleCommuneRequired() {
+            const deliveryType = document.querySelector('input[name="deliveryType"]:checked').value;
+            if (deliveryType === 'office') {
+                // Bureau : Commune non obligatoire
+                communeInput.required = false;
+                communeInput.value = '';
+                communeGroup.classList.add('disabled');
+                errorCommune.textContent = '';
+                communeInput.classList.remove('error');
+            } else {
+                // Domicile : Commune obligatoire
+                communeInput.required = true;
+                communeGroup.classList.remove('disabled');
+            }
+        }
 
         // ===============================
         // CALCULATION & SUMMARY
@@ -1537,7 +1617,7 @@
             summaryOffer.textContent = `BePerfect — ${selectedOffer.name}`;
             summaryQuantity.textContent = selectedOffer.quantity;
             summaryPrice.textContent = `${productPrice} DA`;
-            
+
             if (isFreeDelivery) {
                 summaryDelivery.textContent = "مجاني 🚚";
             } else if (selectedWilaya) {
@@ -1545,7 +1625,7 @@
             } else {
                 summaryDelivery.textContent = "اختاري الولاية";
             }
-            
+
             summaryTotal.textContent = `${total} DA`;
             stickyPrice.textContent = `${productPrice} DA`;
         }
@@ -1555,14 +1635,15 @@
         // ===============================
         orderForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            
+
             document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
             document.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
 
             const fullname = document.getElementById('fullname').value.trim();
             const phone = document.getElementById('phone').value.trim();
             const wilaya = wilayaSelect.value;
-            const commune = document.getElementById('commune').value.trim();
+            const deliveryType = document.querySelector('input[name="deliveryType"]:checked').value;
+            const commune = communeInput.value.trim();
             const selectedOfferId = offerSelect.value;
 
             let isValid = true;
@@ -1586,9 +1667,10 @@
                 isValid = false;
             }
 
-            if (!commune) {
-                document.getElementById('error-commune').textContent = 'الرجاء إدخال البلدية';
-                document.getElementById('commune').classList.add('error');
+            // Commune obligatoire UNIQUEMENT si Domicile
+            if (deliveryType === 'home' && !commune) {
+                errorCommune.textContent = 'الرجاء إدخال البلدية';
+                communeInput.classList.add('error');
                 isValid = false;
             }
 
@@ -1600,9 +1682,8 @@
             if (!isValid) return;
 
             const selectedOffer = offers[selectedOfferId];
-            const deliveryType = document.querySelector('input[name="deliveryType"]:checked').value;
             const deliveryTypeText = deliveryType === 'home' ? 'المنزل 🏠' : 'المكتب 🏢';
-            
+
             let deliveryCost = 0;
             if (!selectedOffer.freeDelivery && deliveryPrices[wilaya]) {
                 deliveryCost = deliveryPrices[wilaya][deliveryType] || 0;
@@ -1613,7 +1694,7 @@
                 name: fullname,
                 phone: phone,
                 wilaya: wilaya,
-                commune: commune,
+                commune: deliveryType === 'office' ? 'غير محدد (توصيل للمكتب)' : commune,
                 offer: selectedOffer.name,
                 quantity: selectedOffer.quantity,
                 deliveryType: deliveryTypeText,
@@ -1629,9 +1710,6 @@
             submitBtn.disabled = true;
 
             try {
-                // ==========================================
-                // TELEGRAM SENDING (ACTIVE)
-                // ==========================================
                 const message = `
 🛍️ طلب BePerfect جديد
 ━━━━━━━━━━━━━━
@@ -1649,19 +1727,12 @@
 🕐 وقت الطلب: ${orderData.date}
                 `;
 
-              const response = await fetch(
-  `https://api.telegram.org/bot8817379702:AAHnu3na31b9dlWamCIlAxb7CBL8uA8a0pU/sendMessage`,
-  {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      chat_id: 6245150338,
-      text: message
-    })
-  }
-);
+                const response = await fetch(`https://api.telegram.org/bot8817379702:AAHnu3na31b9dlWamCIlAxb7CBL8uA8a0pU/sendMessage`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ chat_id: 6245150338, text: message })
+                });
+
                 const result = await response.json();
                 console.log('Telegram API Response:', result);
 
@@ -1672,6 +1743,7 @@
                 successModal.classList.add('active');
                 orderForm.reset();
                 selectOffer('one');
+                toggleCommuneRequired();
                 updateSummary();
 
             } catch (error) {
@@ -1686,14 +1758,9 @@
         // ===============================
         // MODAL LOGIC
         // ===============================
-        modalClose.addEventListener('click', () => {
-            successModal.classList.remove('active');
-        });
-
+        modalClose.addEventListener('click', () => successModal.classList.remove('active'));
         successModal.addEventListener('click', (e) => {
-            if (e.target === successModal) {
-                successModal.classList.remove('active');
-            }
+            if (e.target === successModal) successModal.classList.remove('active');
         });
 
         // ===============================
@@ -1706,15 +1773,13 @@
                 question.addEventListener('click', () => {
                     const isActive = item.classList.contains('active');
                     faqItems.forEach(i => i.classList.remove('active'));
-                    if (!isActive) {
-                        item.classList.add('active');
-                    }
+                    if (!isActive) item.classList.add('active');
                 });
             });
         }
 
         // ===============================
-        // MOBILE STICKY CTA VISIBILITY
+        // MOBILE STICKY CTA
         // ===============================
         function setupMobileSticky() {
             const orderSection = document.getElementById('order');
@@ -1727,7 +1792,6 @@
                     }
                 });
             }, { threshold: 0.1 });
-            
             observer.observe(orderSection);
         }
 
@@ -1738,12 +1802,7 @@
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
         });
 
@@ -1760,7 +1819,6 @@
                     }
                 });
             }, { threshold: 0.1 });
-            
             reveals.forEach(reveal => observer.observe(reveal));
         }
     </script>
